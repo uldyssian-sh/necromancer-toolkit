@@ -9,6 +9,12 @@
   - Blockchain security analysis platform
   - Advanced monitoring and compliance systems
 
+- **necromancer-io** - Security Operations & Automation
+  - Security operations center (SOC) automation
+  - Threat hunting and incident response
+  - Security compliance and governance
+  - Enterprise security tool integration
+
 ### Automated Contributors
 - **dependabot[bot]** - Security Dependency Management
   - Automated security vulnerability updates
