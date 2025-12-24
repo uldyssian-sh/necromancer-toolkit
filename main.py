@@ -30,6 +30,7 @@ def main() -> int:
     """
     try:
         logger.info("Starting Necromancer Toolkit Platform...")
+        logger.info("Enterprise CI/CD Pipeline Integration Active")
         
         # Basic security health check
         security_status = check_security_health()
