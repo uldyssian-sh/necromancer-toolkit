@@ -280,6 +280,9 @@ class AdvancedMonitoringSystem:
         """Collect system performance metrics."""
         timestamp = datetime.now()
         
+        # Memory leak detection
+        self._detect_memory_leaks()
+        
         # CPU metrics
         cpu_percent = psutil.cpu_percent(interval=1)
         self._store_metric(Metric(
@@ -909,3 +912,33 @@ def main():
 
 if __name__ == "__main__":
     main()
+    def _detect_memory_leaks(self):
+        """Detect potential memory leaks in running processes."""
+        try:
+            # Track memory usage over time for leak detection
+            current_memory = psutil.virtual_memory().percent
+            
+            # Store memory history for trend analysis
+            if not hasattr(self, '_memory_history'):
+                self._memory_history = []
+            
+            self._memory_history.append({
+                'timestamp': datetime.now(),
+                'memory_percent': current_memory
+            })
+            
+            # Keep only last 100 measurements
+            if len(self._memory_history) > 100:
+                self._memory_history = self._memory_history[-100:]
+            
+            # Detect memory leak pattern (consistent increase over time)
+            if len(self._memory_history) >= 10:
+                recent_values = [m['memory_percent'] for m in self._memory_history[-10:]]
+                if all(recent_values[i] <= recent_values[i+1] for i in range(len(recent_values)-1)):
+                    # Consistent increase detected
+                    increase_rate = (recent_values[-1] - recent_values[0]) / len(recent_values)
+                    if increase_rate > 0.5:  # More than 0.5% per measurement
+                        self.logger.warning(f"Potential memory leak detected: {increase_rate:.2f}% increase rate")
+                        
+        except Exception as e:
+            self.logger.error(f"Memory leak detection failed: {e}")
