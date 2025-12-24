@@ -1,9 +1,32 @@
 # Necromancer Toolkit Fork
 
-[![Security Audit](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/security-audit.yml/badge.svg)](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/security-audit.yml)
-[![Docker Build](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/docker-build.yml/badge.svg)](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/docker-build.yml)
-[![Code Quality](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/code-quality.yml/badge.svg)](https://github.com/uldyssian-sh/necromancer-toolkit-fork/actions/workflows/code-quality.yml)
+[![Enterprise CI/CD](https://github.com/uldyssian-sh/necromancer-toolkit/actions/workflows/enterprise-ci-cd.yml/badge.svg)](https://github.com/uldyssian-sh/necromancer-toolkit/actions/workflows/enterprise-ci-cd.yml)
+[![Dependency Updates](https://github.com/uldyssian-sh/necromancer-toolkit/actions/workflows/dependency-update.yml/badge.svg)](https://github.com/uldyssian-sh/necromancer-toolkit/actions/workflows/dependency-update.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Security](https://img.shields.io/badge/Security-Enterprise-green.svg)](https://github.com/uldyssian-sh/necromancer-toolkit/security)
+[![GitHub release](https://img.shields.io/github/v/release/uldyssian-sh/necromancer-toolkit)](https://github.com/uldyssian-sh/necromancer-toolkit/releases)
+
+## 📋 About
+
+**Necromancer Toolkit Fork** is an enterprise-grade cybersecurity and automation platform designed for modern infrastructure management. This toolkit provides comprehensive security analysis, threat hunting capabilities, and advanced automation features for enterprise environments.
+
+### 🎯 Purpose
+- **Enterprise Security**: Advanced threat detection and vulnerability assessment
+- **Automation Platform**: Streamlined infrastructure management and deployment
+- **AI-Powered Analysis**: Machine learning-driven security insights
+- **Compliance Management**: Automated compliance monitoring and reporting
+
+### 🏢 Target Audience
+- **Security Engineers**: Advanced threat hunting and incident response
+- **DevOps Teams**: Automated security integration in CI/CD pipelines  
+- **Enterprise IT**: Large-scale infrastructure security management
+- **Compliance Officers**: Automated regulatory compliance monitoring
+
+### 🔧 Core Technologies
+- **Python 3.11+**: Modern Python with enterprise security features
+- **Docker & Kubernetes**: Containerized deployment and orchestration
+- **AI/ML Models**: Advanced threat detection and behavioral analysis
+- **Blockchain Integration**: Multi-chain security analysis capabilities
 
 Enterprise cybersecurity and automation toolkit with advanced threat hunting, AI-powered analysis, and cutting-edge technology integration capabilities.
 
