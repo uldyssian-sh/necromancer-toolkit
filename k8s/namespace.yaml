@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: necromancer-toolkit
+  labels:
+    name: necromancer-toolkit
+    environment: production
+    team: security
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: necromancer-toolkit-quota
+  namespace: necromancer-toolkit
+spec:
+  hard:
+    requests.cpu: "4"
+    requests.memory: 8Gi
+    limits.cpu: "8"
+    limits.memory: 16Gi
+    persistentvolumeclaims: "10"
+    services: "10"
+    secrets: "10"
+    configmaps: "10"
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: necromancer-toolkit-limits
+  namespace: necromancer-toolkit
+spec:
+  limits:
+  - default:
+      cpu: "1"
+      memory: "1Gi"
+    defaultRequest:
+      cpu: "100m"
+      memory: "128Mi"
+    type: Container
